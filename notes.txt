@@ -1,0 +1,7 @@
+It would be great to have a function to turn a float to int and vice versa
+float:3.141592 -> int:3
+
+Also something that performs integer arithmetic to a float
+float:3.141592 + 10 => float:13.141592
+
+Several things are frame dependant...
