@@ -6,7 +6,8 @@ Source code for the game Tux-vs-Mutant-Window made in Bash.
 
 Watch on Youtube (click the image):
 
-...
+[![Watch on Youtube](https://img.youtube.com/vi/wpCwc7-D8xw/maxresdefault.jpg)](https://www.youtube.com/watch?v=wpCwc7-D8xw)
+
 
 #### Language used
 Bash: 5.1.16(1)-release.
