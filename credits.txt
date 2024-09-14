@@ -1,9 +1,28 @@
+GRAPHICS
+
 Shiny window pane
-https://opengameart.org/content/shiny-window-pane
 Made by Fupi
+https://opengameart.org/content/shiny-window-pane
 CC0
 
 Tux - Kyrodian Legends Style
 Made by Kelvin Shadewing
 https://opengameart.org/content/tux-kyrodian-legends-style
 https://creativecommons.org/licenses/by-sa/4.0/
+
+MUSIC
+
+Oldschool Action Theme
+Made by Joth
+CC0
+https://opengameart.org/content/oldschool-action-theme
+
+Porkymon Battle Theme
+Made by Joth
+CC0
+https://opengameart.org/content/porkymon-battle-theme
+
+Speedier Than Photons
+Made by Joth
+CC0
+https://opengameart.org/content/speedier-than-photons
