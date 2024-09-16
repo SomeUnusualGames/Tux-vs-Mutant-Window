@@ -114,8 +114,8 @@ function init_window_boss() {
   tentacle_index=0
 
   struct -m win_pos_ptr Vector2 win_pos
-  win_pos[x]=float:700.0
-  win_pos[y]=float:300.0
+  win_pos[x]=float:700$dec_pt0
+  win_pos[y]=float:300$dec_pt0
   pack $win_pos_ptr win_pos  
 
   win_max_movement_delay=600
@@ -154,8 +154,8 @@ function restart_win() {
   dlcall sh_StopMusicStream $music_game_over_ptr
   #dlcall -n screen_width -r int GetScreenWidth
   #win_pos[x]=float:$((${screen_width##*:} - 400))
-  win_pos[x]=float:700.0
-  win_pos[y]=float:300.0
+  win_pos[x]=float:700$dec_pt0
+  win_pos[y]=float:300$dec_pt0
   pack $win_pos_ptr win_pos
 }
 

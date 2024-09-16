@@ -17,7 +17,7 @@ function load_tux_assets() {
   pack $tux_vec_origin_ptr tux_vec_origin
 
   struct -m tux_rec_dest_ptr Rectangle tux_rec_dest
-  set_rect_values tux_rec_dest float:100.0 float:100.0 float:64.0 float:64.0
+  set_rect_values tux_rec_dest float:100$dec_pt0 float:100$dec_pt0 float:64$dec_pt0 float:64$dec_pt0
   pack $tux_rec_dest_ptr tux_rec_dest
 
   struct -m tux_bullet_rect_ptr Rectangle tux_bullet_rect
@@ -76,8 +76,8 @@ function restart_tux() {
   tux_bullets_y=()
   tux_rec_origin[y]=float:0.0
   pack $tux_rec_origin_ptr tux_rec_origin
-  tux_rec_dest[x]=float:100.0
-  tux_rec_dest[y]=float:100.0
+  tux_rec_dest[x]=float:100$dec_pt0
+  tux_rec_dest[y]=float:100$dec_pt0
   pack $tux_rec_dest_ptr tux_rec_dest
   tux_frame_delay=(40 40)
 }
