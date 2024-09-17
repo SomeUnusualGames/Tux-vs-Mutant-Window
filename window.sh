@@ -392,7 +392,11 @@ function update_window_wave_2() {
 function update_music() {
   local music_intro=$1
   local music_loop=$2
-  dlcall -n is_intro_playing -r int sh_IsMusicStreamPlaying $music_intro
+  if [[ $music_intro ]]; then
+    dlcall -n is_intro_playing -r int sh_IsMusicStreamPlaying $music_intro
+  else
+    is_intro_playing=int:0
+  fi
 
   if $game_over; then
     dlcall sh_UpdateMusicStream $music_game_over_ptr
@@ -401,7 +405,11 @@ function update_music() {
   elif [[ $is_intro_playing == int:1 ]]; then
     dlcall sh_UpdateMusicStream $music_intro
   else
-    dlcall -n is_loop_playing -r int sh_IsMusicStreamPlaying $music_loop
+    if [[ $music_loop ]]; then
+      dlcall -n is_loop_playing -r int sh_IsMusicStreamPlaying $music_loop
+    else
+      is_loop_playing=int:0
+    fi
     if [[ $is_loop_playing == int:0 ]]; then
       dlcall sh_StopMusicStream $music_intro
       dlcall sh_PlayMusicStream $music_loop
