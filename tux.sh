@@ -119,7 +119,7 @@ function tux_movement() {
   fi
 
   dlcall -n is_right_down -r int sh_IsKeyDown int:68
-  if [[ $is_right_down == int:1 && ${pos_x##*:} -lt ${screen_width##*:}-32 ]]; then
+  if [[ $is_right_down == int:1 && ${pos_x##*:} -lt $viewport_width-32 ]]; then
     dlcall -n pos_x -r float add_position ${tux_rec_dest[x]} $tux_speed $dt 
     tux_rec_dest[x]=$pos_x
     pos_x=${pos_x%%$dec_pt*}
@@ -136,7 +136,7 @@ function tux_movement() {
   fi
 
   dlcall -n is_down_down -r int sh_IsKeyDown int:83
-  if [[ $is_down_down == int:1 && ${pos_y##*:} -lt ${screen_height##*:}-44 ]]; then
+  if [[ $is_down_down == int:1 && ${pos_y##*:} -lt $viewport_height-44 ]]; then
     #pos_y=$((${pos_y##*:} + 3))
     dlcall -n pos_y -r float add_position ${tux_rec_dest[y]} $tux_speed $dt 
     tux_rec_dest[y]=$pos_y

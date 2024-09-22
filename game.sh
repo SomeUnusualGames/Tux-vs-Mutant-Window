@@ -10,7 +10,7 @@ function init_everything() {
   init_title
 
   struct -m render_texture_ptr RenderTexture render_texture
-  dlcall sh_LoadRenderTexture $render_texture_ptr int:1280 int:720
+  dlcall sh_LoadRenderTexture $render_texture_ptr int:$viewport_width int:$viewport_height
   dlcall sh_SetTextureFilter $render_texture_ptr
 }
 
@@ -69,7 +69,7 @@ function draw_game() {
   dlcall EndTextureMode
 
   begin_drawing int64:4278190080
-  dlcall sh_DrawRenderTexture $render_texture_ptr int:1280 int:720
+  dlcall sh_DrawRenderTexture $render_texture_ptr int:$viewport_width int:$viewport_height
   end_drawing
 }
 

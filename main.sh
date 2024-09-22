@@ -12,6 +12,9 @@ if ! source ctypes.sh; then
   exit 1
 fi
 
+viewport_width=1280
+viewport_height=720
+
 source raylib.sh
 source utils.sh
 source space_background.sh
@@ -21,7 +24,7 @@ source title.sh
 source game.sh
 
 include_files
-init_everything 1280 720 Tux-Vs-Mutant-Window
+init_everything $viewport_width $viewport_height Tux-Vs-Mutant-Window
 
 in_title=true
 game_over=false

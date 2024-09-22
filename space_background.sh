@@ -5,8 +5,8 @@ function init_background() {
   dlcall -n screen_width -r int GetScreenWidth
   dlcall -n screen_height -r int GetScreenHeight
   for ((i=0; i < $n_stars; i++)); do
-    stars_x+=( $(random 0 1280) )
-    stars_y+=( $(random 0 720) )
+    stars_x+=( $(random 0 $viewport_width) )
+    stars_y+=( $(random 0 $viewport_height) )
   done
 }
 
